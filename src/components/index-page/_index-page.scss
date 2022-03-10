@@ -1,0 +1,22 @@
+.index-page{
+    height: calc(100vh - 70px);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: index-page-slider 3s linear infinite alternate;
+}
+
+@keyframes index-page-slider {
+    0% {
+        background-image: url(../components/index-page/image/bg-1.jpg);
+    }
+
+    50% {
+        background-image: url(../components/index-page/image/bg-2.jpg);
+    }
+
+    100% {
+        background-image: url(../components/index-page/image/bg-3.jpg);
+    }
+}
