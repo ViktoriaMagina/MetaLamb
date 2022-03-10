@@ -1,0 +1,110 @@
+html,
+body {
+	height: 100%;
+  	min-width: 320px;
+	box-sizing: border-box;
+	color: rgba(31, 32, 65, 0.5);
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+
+.container{
+  max-width: 1470px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+  
+*,
+*::after,
+*::before{
+	box-sizing: inherit;
+}
+  
+ul[class],
+ol[class] {
+	padding: 0;
+	list-style: none;
+}
+  
+input,
+button,
+textarea,
+select {
+	font: inherit;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+  
+.button-white{
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: uppercase;
+	color: #BC9CFF;
+	background-color: #fff;
+	padding: 7px 20px 8px 20px;
+    border-radius: 22px;
+	border: 2px solid #BC9CFF;
+	transition: opacity .3s ease-in;
+	&:hover{
+		opacity: 0.5;
+	}
+}
+.button-purple{
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 15px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	padding: 9px 20px 10px 20px;
+    border-radius: 22px;
+	background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+	transition: opacity .3s ease-in;
+	&:hover{
+		opacity: 0.5;
+	}
+}
