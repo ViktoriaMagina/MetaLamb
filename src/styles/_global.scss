@@ -7,6 +7,7 @@ body {
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 17px;
+	background-color: #fff;
 }
 
 .wrapper {
@@ -23,6 +24,11 @@ body {
 }
 
 .container{
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.container-large{
   max-width: 1470px;
   margin: 0 auto;
   padding: 0 15px;
@@ -76,6 +82,8 @@ select {
 	font: inherit;
 	outline: none;
 	border: none;
+}
+button{
 	cursor: pointer;
 }
   
