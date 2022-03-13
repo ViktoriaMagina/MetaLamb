@@ -4,19 +4,26 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    animation: index-page-slider 3s linear infinite alternate;
+    animation-name: index-page-slider;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
 }
 
 @keyframes index-page-slider {
     0% {
+        // opacity: 1;
         background-image: url(../components/index-page/image/bg-1.jpg);
+        // animation-timing-function: ease-out;
     }
-
     50% {
+        // opacity: 0;
         background-image: url(../components/index-page/image/bg-2.jpg);
+        // animation-timing-function: ease-out;
     }
-
     100% {
+        // opacity: 1;
         background-image: url(../components/index-page/image/bg-3.jpg);
+        // animation-timing-function: ease-out;
     }
 }
