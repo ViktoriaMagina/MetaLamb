@@ -4,11 +4,34 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    animation-name: index-page-slider;
-    animation-duration: 60s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
+    // animation-name: index-page-slider;
+    // animation-duration: 60s;
+    // animation-iteration-count: infinite;
+    // animation-direction: normal;
+    background-image: url(../components/index-page/image/bg-1.jpg);
+    .container{
+        height: inherit;
+    }
+    &__wrapper{
+        position: relative;
+        height: inherit;
+    }
+    &__text{
+        line-height: 24px;
+        text-align: right;
+        color: rgba(31, 32, 65, 0.75);
+        max-width: 297px;
+        position: absolute;
+        bottom: 18px;
+        right: 0;
+    }
+    .find-numbers-form{
+        position: absolute;
+        top: 70px;
+        left: 0;
+    }
 }
+
 
 @keyframes index-page-slider {
     0% {
@@ -27,3 +50,4 @@
         // animation-timing-function: ease-out;
     }
 }
+

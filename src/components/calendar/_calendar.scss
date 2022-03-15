@@ -1,0 +1,101 @@
+.air-datepicker-body--day-name {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;  
+    height: 40px;
+}
+.air-datepicker-button {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    background: transparent;
+}
+
+.air-datepicker-nav {
+    border-bottom: none;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 23px;
+    text-align: center;
+    color: #1F2041;
+}
+
+.air-datepicker-cell {
+    --adp-background-color-hover: linear-gradient(180deg, #d0baff 0%, #acbfff 100%);
+    &.-current- {
+        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+        border-radius: 50%;
+    }
+    &.-selected- {
+      border-radius: 50%;
+    }
+}
+
+.air-datepicker-body--day-names {
+    width: 240px;
+    margin: 0 auto
+}
+.air-datepicker-body--cells {
+    width: 240px;
+    margin: 0 auto
+}
+
+.air-datepicker-nav--action {
+    svg {
+      width: 17px;
+      height: 18px;
+      fill: #BC9CFF;
+    }
+  
+    path {
+      fill: #BC9CFF;
+      stroke: #BC9CFF;;
+      stroke-width: 1px;
+    }
+}
+
+.air-datepicker {
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    border-radius: 4px;
+    padding: 20px;
+    --adp-font-family:'Montserrat', sans-serif;
+    --adp-font-size: 12px;
+    --adp-width: 280px;
+    --adp-background-color: #fff;
+    --adp-background-color-hover: transparent;
+    --adp-background-color-active: #fff;
+    
+    --adp-background-color-selected-other-month-focused:  #ccb5ff;
+    --adp-background-color-selected-other-month: #8BA4F9 ;
+  
+    --adp-color: rgba(31, 32, 65, 0.5);
+    --adp-color-secondary: #BC9CFF;
+
+    --adp-accent-color: #fff;
+    --adp-color-current-date: var(--adp-accent-color);
+
+  
+    --adp-nav-height: 40px;
+    --adp-nav-arrow-color: transparent;
+    --adp-nav-action-size: 40px;
+    --adp-nav-color-secondary: #1F2041;
+  
+    --adp-day-name-color: #BC9CFF;
+  
+    --adp-cell-border-radius: 50%;
+    --adp-cell-background-color-selected-hover:#BC9CFF;
+    --adp-cell-background-color-selected: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    --adp-cell-background-color-selected: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+
+    --adp-cell-border-color-in-range: none;
+    --adp-btn-height: 40px;
+    --adp-btn-color: #BC9CFF;
+    --adp-btn-color-hover: #BC9CFF;
+    --adp-btn-border-radius: var(--adp-border-radius);
+
+    --adp-btn-background-color-hover: transparent;
+    --adp-btn-background-color-active: transparent;
+    --adp-time-day-period-color: var(--adp-color-secondary);
+  }

@@ -1,0 +1,11 @@
+form.find-numbers-form
+  h1.find-numbers-form__title Найдём номера под ваши пожелания
+  .find-numbers-form__wrapper
+    .find-numbers-form__inner
+      .find-numbers-form__item.find-numbers-form__item--arrow
+          span.find-numbers-form__item-name период
+          include ../calendar/_calendar
+      .find-numbers-form__item.find-numbers-form__item--arrow
+          span.find-numbers-form__item-name гости
+          input.find-numbers-form__item-input(placeholder="Сколько гостей", type="text", name="guests")
+    button.find-numbers-form__link.button-purple-arrow(type="submit") подобрать номер

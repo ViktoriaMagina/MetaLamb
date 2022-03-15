@@ -1,17 +1,5 @@
 .index-page
   .container
-    .find-numbers
-      h1.find-numbers__title
-      .find-numbers__form
-        .find-numbers__row
-          label.find-numbers__item.find-numbers__arrival(for='arrival')
-            span.find-numbers__item-name.find-numbers__arrival-name
-            input.find-numbers__item-input.find-numbers__arrival-input(name='arrival' type='text')
-          label.find-numbers__item.find-numbers__exit(for='exit')
-            span.find-numbers__item-name.find-numbers__exit-name
-            input.find-numbers__item-input.find-numbers__exit-input(name='exit' type='text')
-        .find-numbers__guests
-          label.find-numbers__item.find-numbers__guests(for='guests')
-            span.find-numbers__item-name.find-numbers__guests-name
-            input.find-numbers__item-input.find-numbers__guests-input(name='guests' type='text')
-        a.find-numbers__select(href='#')
+    .index-page__wrapper
+      include ../find-numbers-form/_find-numbers-form
+      .index-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения
