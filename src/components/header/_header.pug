@@ -9,12 +9,25 @@ header.header
             li.header__menu-item
               a.header__menu-link(href='#') О нас
             li.header__menu-item
-              a.header__menu-link(href='#') Услуги
+              .dropdown
+                .dropdown-header Услуги
+                .dropdown-body
+                  .dropdown-item
+                    a.dropdown-link(href='#') Подбор номеров
+                  .dropdown-item
+                    a.dropdown-link(href='#') Консультация у специалиста
             li.header__menu-item
               a.header__menu-link(href='#') Вакансии
             li.header__menu-item
               a.header__menu-link(href='#') Новости
             li.header__menu-item
-              a.header__menu-link(href='#') Соглашения
+              .dropdown
+                .dropdown-header Соглашения
+                .dropdown-body
+                  .dropdown-item
+                    a.dropdown-link(href='#') Персональное соглашение
+                  .dropdown-item
+                    a.dropdown-link(href='#') Правила сайта
+              a.header__menu-link(href='#') 
         a.header__entry-link.button-white(href='#') войти
         a.header__registration-link.button-purple(href='#') зарегистрироваться

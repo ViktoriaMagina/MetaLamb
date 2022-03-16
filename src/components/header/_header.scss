@@ -30,10 +30,12 @@
         }
         &-item{
             margin-right: 20px;
-            transition: color .3s ease-in-out;
             &:last-child{
                 margin-right: 0;
             }
+        }
+        &-link{
+            transition: color .3s ease-in-out;
             &:hover{
                 color: #BC9CFF;
             }
@@ -41,5 +43,15 @@
     }
     &__entry-link{
         margin-right: 20px;
+    }
+    .dropdown-header{
+        &:hover{
+            color: #BC9CFF;
+        }
+    }
+    .dropdown-link{
+        &:hover{
+            color: #BC9CFF;
+        }
     }
 }
