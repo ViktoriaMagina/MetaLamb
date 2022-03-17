@@ -1,0 +1,7 @@
+mixin dropdown(title, ...links)
+    .dropdown   
+        .dropdown__header= title
+        .dropdown__body
+            each link in links
+                .dropdown__item
+                    a.dropdown__link(href='#')= link

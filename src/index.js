@@ -1,4 +1,5 @@
 import './styles/style.scss'
 import * as $ from 'jquery'
 import './components/calendar/_calendar'
-import './components/header/_header'
+import './components/dropdown/_dropdown'
+import './components/dropdown-counter/_dropdown-counter'

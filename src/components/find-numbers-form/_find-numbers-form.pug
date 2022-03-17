@@ -5,7 +5,7 @@ form.find-numbers-form
       .find-numbers-form__item.find-numbers-form__item--arrow
           span.find-numbers-form__item-name период
           include ../calendar/_calendar
-      .find-numbers-form__item.find-numbers-form__item--arrow
+      .find-numbers-form__item
           span.find-numbers-form__item-name гости
-          input.find-numbers-form__item-input(placeholder="Сколько гостей", type="text", name="guests")
+          include ../dropdown-counter/_dropdown-counter
     button.find-numbers-form__link.button-purple-arrow(type="submit") подобрать номер

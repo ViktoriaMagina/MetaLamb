@@ -1,33 +1,22 @@
+include ../dropdown/_dropdown.pug
+
 header.header
   .container
     .header__inner
       a.header__logo(href='#')
-        img.header__logo-img(src=require("./images/logo.png"), alt="logo")
+        img.header__logo-img(src=require("./components/header/images/logo.png"), alt="logo")
       .header__content
         nav.header__menu
           ul.header__menu-list
             li.header__menu-item
               a.header__menu-link(href='#') О нас
             li.header__menu-item
-              .dropdown
-                .dropdown-header Услуги
-                .dropdown-body
-                  .dropdown-item
-                    a.dropdown-link(href='#') Подбор номеров
-                  .dropdown-item
-                    a.dropdown-link(href='#') Консультация у специалиста
+              +dropdown("Услуги", "Подбор номеров", "Консультация у специалиста")
             li.header__menu-item
               a.header__menu-link(href='#') Вакансии
             li.header__menu-item
               a.header__menu-link(href='#') Новости
             li.header__menu-item
-              .dropdown
-                .dropdown-header Соглашения
-                .dropdown-body
-                  .dropdown-item
-                    a.dropdown-link(href='#') Персональное соглашение
-                  .dropdown-item
-                    a.dropdown-link(href='#') Правила сайта
-              a.header__menu-link(href='#') 
+              +dropdown("Соглашения", "Персональные данные", "Пользовательское соглашение")
         a.header__entry-link.button-white(href='#') войти
         a.header__registration-link.button-purple(href='#') зарегистрироваться
