@@ -1,25 +1,33 @@
 const dropdownHeaders = document.querySelectorAll(".dropdown__header");
-const dropdownBody = document.querySelectorAll(".dropdown__body");
+const dropdownBodys = document.querySelectorAll(".dropdown__body");
 
 window.addEventListener("DOMContentLoaded", function(){
     dropdownHeaders.forEach((item)=> {
         item.classList.remove('active')
     })
-    dropdownBody.forEach((item)=> {
+    dropdownBodys.forEach((item)=> {
         item.classList.remove('active')
     })
 })
 
 dropdownHeaders.forEach((header)=> {
     header.addEventListener("click", function() {
+        const dropdown = this.closest(".dropdown");
+        const dropdownBody =  dropdown.querySelector(".dropdown__body")
+        const dropdownHeader = dropdown.querySelector(".dropdown__header")
         dropdownHeaders.forEach((item)=> {
             item.classList.remove('active')
         })
-        dropdownBody.forEach((item)=> {
+        dropdownBodys.forEach((item)=> {
             item.classList.remove('active')
         })
         this.classList.toggle("active")
-        const dropdown = this.closest(".dropdown");
-        dropdown.querySelector(".dropdown__body").classList.toggle("active")
+        dropdownBody.classList.toggle("active")
+        document.addEventListener("click", function(e){
+            if(!(e.target).closest(".dropdown")){
+                dropdownBody.classList.remove("active");
+                dropdownHeader.classList.remove("active")
+            }
+        })
     })
 })

@@ -1,0 +1,50 @@
+.price-range{
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: #1F2041;
+    }
+    &__info{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 102px;
+    }
+    &__line{
+        margin-bottom: 11px;
+    }
+    &__descr{
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .noUi-connect {
+        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    }
+    .noUi-horizontal {
+        height: 6px;
+        background: #FFFFFF;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 3px;
+        .noUi-handle {
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            border: 2px solid #FFFFFF;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            right: 0;
+            top: -4px;
+            &::after,
+            &::before{
+                display: none;
+            }
+        }
+    }
+}

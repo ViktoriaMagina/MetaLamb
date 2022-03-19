@@ -1,0 +1,30 @@
+aside.filter-room
+    form(name="filter-room").filter-room__inner
+        .widget
+            span.widget__title даты пребывания в отеле
+            .widget__body
+                include ../calendar/_calendar
+        .widget
+            span.widget__title гости
+            .widget__body
+                include ../dropdown-counter-guests/_dropdown-counter-guests
+        .widget
+            .widget__body
+                include ../price-range/_price-range
+        .widget
+            span.widget__title правила дома
+            .widget__body
+                include ../rules-list/_rules-list
+        .widget
+            span.widget__title доступность
+            .widget__body
+                include ../availability-list/_availability-list
+        .widget
+            span.widget__title удобства номера
+            .widget__body
+                include ../dropdown-counter-facilities/_dropdown-counter-facilities
+        .widget
+            span.widget__title дополнительные удобства
+            .widget__body
+
+                

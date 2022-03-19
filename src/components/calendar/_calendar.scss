@@ -1,7 +1,8 @@
 .calendar{
     position: relative;
+    width: 320px;
     &__header{
-        max-width: 320px;
+        max-width: 100%;
         display: block;
         text-align: left;
         width: 100%;

@@ -1,0 +1,25 @@
+.dropdown-counter-guests
+    input.dropdown-counter-guests__header(placeholder="Сколько гостей", type="text", name="guests") 
+    .dropdown-counter-guests__body
+        ul.dropdown-counter-guests__inner
+            li.dropdown-counter-guests__item
+                span.dropdown-counter-guests__name взрослые
+                .dropdown-counter-guests__box
+                    button.dropdown-counter-guests__plus(type="button", data-guests-plus) -
+                    span.dropdown-counter-guests__num(data-guests-num) 0
+                    button.dropdown-counter-guests__minus(type="button", data-guests-minus) +
+            li.dropdown-counter-guests__item
+                span.dropdown-counter-guests__name дети
+                .dropdown-counter-guests__box
+                    button.dropdown-counter-guests__plus(type="button", data-guests-plus) -
+                    span.dropdown-counter-guests__num(data-guests-num) 0
+                    button.dropdown-counter-guests__minus(type="button", data-guests-minus) +
+            li.dropdown-counter-guests__item
+                span.dropdown-counter-guests__name младенцы
+                .dropdown-counter-guests__box
+                    button.dropdown-counter-guests__plus(type="button", data-guests-plus) -
+                    span.dropdown-counter-guests__num(data-guests-num) 0
+                    button.dropdown-counter-guests__minus(type="button", data-guests-minus) +
+        .dropdown-counter-guests__buttons
+            button.dropdown-counter-guests__btn-clear(type="button", data-guests-clear) очистить
+            button.dropdown-counter-guests__btn-select(type="button", data-guests-select) применить

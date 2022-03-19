@@ -1,0 +1,23 @@
+.filter-room{
+    width: 266px;
+    background-color: #fff;
+    margin-right: 60px;
+    .widget{
+        margin-bottom: 30px;
+        &__title{
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+            color: #1F2041;
+        }
+        &__body{
+            margin-top: 5px;
+        }
+    }
+    .calendar,
+    .dropdown-counter-guests,
+    .dropdown-counter-facilities{
+        width: 266px;
+    }
+}

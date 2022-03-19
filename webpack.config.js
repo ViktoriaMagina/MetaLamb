@@ -50,7 +50,12 @@ module.exports = {
             filename: '[name].[contenthash].css'
         }),
         new HTMLWebpackPlugin({
-            template: './src/index.pug'
+            template: './src/index.pug',
+            filename: "index.html"
+        }),
+        new HTMLWebpackPlugin({
+            template: './src/search-room.pug',
+            filename: "search-room.html"
         }),
     ],
     module: {

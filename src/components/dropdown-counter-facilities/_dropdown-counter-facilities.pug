@@ -1,0 +1,22 @@
+.dropdown-counter-facilities
+    input.dropdown-counter-facilities__header(placeholder="Сколько гостей", type="text", name="guests") 
+    .dropdown-counter-facilities__body
+        ul.dropdown-counter-facilities__inner
+            li.dropdown-counter-facilities__item
+                span.dropdown-counter-facilities__name спальни
+                .dropdown-counter-facilities__box
+                    button.dropdown-counter-facilities__plus(type="button", data-facilities-plus) -
+                    span.dropdown-counter-facilities__num(data-facilities-num) 0
+                    button.dropdown-counter-facilities__minus(type="button", data-facilities-minus) +
+            li.dropdown-counter-facilities__item
+                span.dropdown-counter-facilities__name кровати
+                .dropdown-counter-facilities__box
+                    button.dropdown-counter-facilities__plus(type="button", data-facilities-plus) -
+                    span.dropdown-counter-facilities__num(data-facilities-num) 0
+                    button.dropdown-counter-facilities__minus(type="button", data-facilities-minus) +
+            li.dropdown-counter-facilities__item
+                span.dropdown-counter-facilities__name ванные комнаты
+                .dropdown-counter-facilities__box
+                    button.dropdown-counter-facilities__plus(type="button", data-facilities-plus) -
+                    span.dropdown-counter-facilities__num(data-facilities-num) 0
+                    button.dropdown-counter-facilities__minus(type="button", data-facilities-minus) +
