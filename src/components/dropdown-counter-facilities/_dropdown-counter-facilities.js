@@ -19,44 +19,38 @@ dropdownСounterHeaders.forEach((header)=> {
     })
 })
 
-dropdownСounterMinus.forEach((item)=> {
+const dropdownСounterBtn = (item, sign) => {
     const dropdownСounter = item.closest(".dropdown-counter-facilities")
     const dropdownСounterBox = item.closest(".dropdown-counter-facilities__box")
     const dropdownСounterHeader = dropdownСounter.querySelector(".dropdown-counter-facilities__header")
     const dropdownСounterNum = dropdownСounterBox.querySelector("[data-facilities-num]")
-    item.addEventListener("click", function() {
-        if(dropdownСounterNum.innerText < 20){
-            dropdownСounterNum.innerText = parseInt(dropdownСounterNum.innerText) + 1
-            dropdownСounterHeaderNum += 1
-            if(dropdownСounterHeaderNum == 1)
-                dropdownСounterHeader.value = `${dropdownСounterHeaderNum} гость`
-            if(dropdownСounterHeaderNum < 5 & dropdownСounterHeaderNum !=1)
-                dropdownСounterHeader.value = `${dropdownСounterHeaderNum} гостя`
-            if(dropdownСounterHeaderNum >= 5 )
-                dropdownСounterHeader.value = `${dropdownСounterHeaderNum} гостей`
-        }
-        if(dropdownСounterHeaderNum == 0)
-            dropdownСounterHeader.value = ""
-        
-    })
-})
+    if(sign ==="plus" 
+        ? dropdownСounterNum.innerText < 20  
+        : dropdownСounterNum.innerText > 0
+    ){
+    if(sign === "plus"){
+        dropdownСounterNum.innerText = parseInt(dropdownСounterNum.innerText) + 1
+        dropdownСounterHeaderNum = dropdownСounterHeaderNum + 1
+    }
+    if(sign === "minus"){
+        dropdownСounterNum.innerText = parseInt(dropdownСounterNum.innerText) - 1
+        dropdownСounterHeaderNum = dropdownСounterHeaderNum - 1
+    }
+    if(dropdownСounterHeaderNum == 1)
+        dropdownСounterHeader.value = `${dropdownСounterHeaderNum} гость`
+    if(dropdownСounterHeaderNum < 5 & dropdownСounterHeaderNum !=1)
+        dropdownСounterHeader.value = `${dropdownСounterHeaderNum} гостя`
+    if(dropdownСounterHeaderNum >= 5 )
+        dropdownСounterHeader.value = `${dropdownСounterHeaderNum} гостей`
+    }
+    if(dropdownСounterHeaderNum == 0)
+        dropdownСounterHeader.value = ""
+}
 dropdownСounterPlus.forEach((item)=> {
-    const dropdownСounter = item.closest(".dropdown-counter-facilities")
-    const dropdownСounterBox = item.closest(".dropdown-counter-facilities__box")
-    const dropdownСounterHeader = dropdownСounter.querySelector(".dropdown-counter-facilities__header")
-    const dropdownСounterNum = dropdownСounterBox.querySelector("[data-facilities-num]")
-    item.addEventListener("click", function () {
-        if(dropdownСounterNum.innerText > 0){
-            dropdownСounterNum.innerText = parseInt(dropdownСounterNum.innerText) - 1
-            dropdownСounterHeaderNum = dropdownСounterHeaderNum - 1
-            if(dropdownСounterHeaderNum == 1)
-                dropdownСounterHeader.value = `${dropdownСounterHeaderNum} гость`
-            if(dropdownСounterHeaderNum < 5 & dropdownСounterHeaderNum !=1)
-                dropdownСounterHeader.value = `${dropdownСounterHeaderNum} гостя`
-            if(dropdownСounterHeaderNum >= 5 )
-                dropdownСounterHeader.value = `${dropdownСounterHeaderNum} гостей`
-        }
-        if(dropdownСounterHeaderNum == 0)
-            dropdownСounterHeader.value = ""
-    })
+    const sign = "plus"
+    item.addEventListener("click", ()=> dropdownСounterBtn(item, sign))
+})
+dropdownСounterMinus.forEach((item)=> {
+    const sign = "minus"
+    item.addEventListener("click", () => dropdownСounterBtn(item, sign))
 })
