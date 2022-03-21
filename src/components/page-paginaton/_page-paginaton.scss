@@ -1,0 +1,51 @@
+.page-paginaton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__list{
+        display: flex;
+    }
+    &__link{
+        font-size: 12px;
+        line-height: 40px;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #fff;
+        display: block;
+        &--active{
+            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            font-weight: 700;
+            color: #fff;
+        }
+        &--next{
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            img{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 24px;
+                height: 24px;
+                object-fit: contain;
+            }
+        }
+    }
+    &__item{
+        &--hide{
+            font-size: 12px;
+            line-height: 40px;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #fff;
+            display: block;
+        }
+    }
+    &__text{
+        margin-top: 11px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75); 
+    }
+}

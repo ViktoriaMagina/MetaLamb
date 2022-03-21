@@ -7,11 +7,5 @@ additionalFacilitiesListTitles.forEach((header)=> {
         const additionalFacilitiesListBody =  additionalFacilitiesList.querySelector(".additional-facilities-list__body");
         additionalFacilitiesListBody.classList.toggle("active");
         additionalFacilitiesListTitle.classList.toggle("active");
-        document.addEventListener("click", function(e){
-            if(!(e.target).closest(".additional-facilities-list")){
-                additionalFacilitiesListBody.classList.remove("active");
-                additionalFacilitiesListTitle.classList.remove("active")
-            }
-        })
     })
 })
