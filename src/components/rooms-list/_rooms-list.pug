@@ -1,29 +1,31 @@
+include ../room-item/_room-item.pug
+//- room-item(number,status, price, rewiews, rating, img)
 .rooms-list
     h1.rooms-list__title Номера, которые мы для вас подобрали
     ul.rooms-list__content
         li.rooms-list__item.room-item
-            include ../room-item/_room-item
+            +room-item("888", "люкс", "9990", "145", 5, "1")
         li.rooms-list__item.room-item
-            include ../room-item/_room-item
+            +room-item("840", "", "9900", "145", 4, "2")
         li.rooms-list__item.room-item
-            include ../room-item/_room-item
+            +room-item("980", "люкс", "8500", "145", 3, "3")
         li.rooms-list__item.room-item
-            include ../room-item/_room-item
+            +room-item("856", "", "7300", "145", 5, "4")
         li.rooms-list__item.room-item
-            include ../room-item/_room-item
+            +room-item("740", "", "6000", "145", 4, "5")
         li.rooms-list__item.room-item
-            include ../room-item/_room-item
+            +room-item("982", "", "5800", "145", 3, "6")
         li.rooms-list__item.room-item
-            include ../room-item/_room-item
+            +room-item("678", "", "5500", "145", 5, "7")
         li.rooms-list__item.room-item
-            include ../room-item/_room-item
+            +room-item("450", "", "5300", "145", 4, "8")
         li.rooms-list__item.room-item
-            include ../room-item/_room-item
+            +room-item("350", "", "5000", "145", 3, "9")
         li.rooms-list__item.room-item
-            include ../room-item/_room-item
+            +room-item("666", "", "5000", "145", 5, "10")
         li.rooms-list__item.room-item
-            include ../room-item/_room-item
+            +room-item("444", "", "5000", "145", 4, "11")
         li.rooms-list__item.room-item
-            include ../room-item/_room-item
+            +room-item("352", "", "5000", "145", 3, "12")
     include ../page-paginaton/_page-paginaton
             
