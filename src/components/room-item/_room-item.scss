@@ -18,18 +18,20 @@
         .room-item__slider-prev{
             width: 44px;
             height: 44px;
-            background-image: url("../components/room-item/images/arrow-left.svg");
             background-position: center;
             background-repeat: no-repeat;
             position: absolute;
             top: 50%;
             background-color: transparent;
+            z-index: 10;
         }
         .room-item__slider-next{
             right: 0;
+            background-image: url("../components/room-item/images/arrow-right.svg");
         }
         .room-item__slider-prev{
             left: 0;
+            background-image: url("../components/room-item/images/arrow-left.svg");
         }
         .slick-dots{
             display: flex;
@@ -41,14 +43,16 @@
                 font-size: 0;
                 line-height: 0;
                 margin-right: 4px;
+                display: block;
+                width: 8px;
+                height: 8px;
                 button{
-                    display: block;
-                    width: 8px;
-                    height: 8px;
                     background-color: transparent;
                     border: 1px solid #FFFFFF;
                     box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
                     border-radius: 50%;
+                    width: 100%;
+                    height: 100%;
                 }
                 &.slick-active{
                     background-color: #fff;

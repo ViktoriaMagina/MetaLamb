@@ -1,27 +1,57 @@
-.room-item
-    .room-item__slider
-        .room-item__slider-item
-            a.room-item__slider-link(href="#")
-                img.room-item__slider-img(src=require("./images/image-1.jpg") alt="image")
-        .room-item__slider-item
-            a.room-item__slider-link(href="#")
-                img.room-item__slider-img(src=require("./images/image-1.jpg") alt="image")
-        .room-item__slider-item
-            a.room-item__slider-link(href="#")
-                img.room-item__slider-img(src=require("./images/image-1.jpg") alt="image")  
-        .room-item__slider-item
-            a.room-item__slider-link(href="#")
-                img.room-item__slider-img(src=require("./images/image-1.jpg") alt="image") 
-    .room-item__box
-        .room-item__info
-            .room-item__info-left
-                a.room-item__number(href="#") № 
-                    span 888
-                a.room-item__status(href="#") люкс
-            .room-item__info-right
-                a.room-item__price(href="#") 9 990₽
-                    span в сутки
-        .room-item__social
-            include ../star-rating/_star-rating
-            a.room-item__rewiews(href="#") 145
-                span отзывов
+include ../star-rating/_star-rating.pug
+//- .room-item
+//-     .room-item__slider
+//-         .room-item__slider-item
+//-             a.room-item__slider-link(href="#")
+//-                 img.room-item__slider-img(src=require("./images/image-1.jpg") alt="image")
+//-         .room-item__slider-item
+//-             a.room-item__slider-link(href="#")
+//-                 img.room-item__slider-img(src=require("./images/image-1.jpg") alt="image")
+//-         .room-item__slider-item
+//-             a.room-item__slider-link(href="#")
+//-                 img.room-item__slider-img(src=require("./images/image-1.jpg") alt="image")  
+//-         .room-item__slider-item
+//-             a.room-item__slider-link(href="#")
+//-                 img.room-item__slider-img(src=require("./images/image-1.jpg") alt="image") 
+//-     .room-item__box
+//-         .room-item__info
+//-             .room-item__info-left
+//-                 a.room-item__number(href="#") № 
+//-                     span 888
+//-                 a.room-item__status(href="#") люкс
+//-             .room-item__info-right
+//-                 a.room-item__price(href="#") 9 990₽
+//-                     span в сутки
+//-         .room-item__social
+//-             include ../star-rating/_star-rating
+//-             a.room-item__rewiews(href="#") 145
+//-                 span отзывов
+
+mixin room-item(number,status, price, rewiews, rating, img)
+    .room-item
+        .room-item__slider
+            .room-item__slider-item
+                a.room-item__slider-link(href="#")
+                    img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
+            .room-item__slider-item
+                a.room-item__slider-link(href="#")
+                    img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
+            .room-item__slider-item
+                a.room-item__slider-link(href="#")
+                    img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
+            .room-item__slider-item
+                a.room-item__slider-link(href="#")
+                    img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
+        .room-item__box
+            .room-item__info
+                .room-item__info-left
+                    a.room-item__number(href="#") № 
+                        span= number
+                    a.room-item__status(href="#")= status
+                .room-item__info-right
+                    a.room-item__price(href="#")=price + "₽"
+                        span в сутки
+            .room-item__social
+                +star-rating(rating)
+                a.room-item__rewiews(href="#")= rewiews
+                    span отзывов
