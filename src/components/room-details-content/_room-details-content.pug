@@ -1,0 +1,34 @@
+.room-details-content
+    .container
+        .room-details-content__wrapper
+            .room-details-content__inner 
+                .room-details-content__info 
+                    .room-details-content__top
+                        .room-details-content__item
+                            .room-details-item
+                                h3.room-details-item__title Сведения о номере
+                                .room-details-item__body
+                                    include ../room-information/_room-information
+                        .room-details-content__item
+                            .room-details-item
+                                h3.room-details-item__title Впечатления от номера
+                                .room-details-item__body
+                                    //- include ../room-impressions/_room-impressions
+                    .room-details-content__rewiews
+                        .room-details-item
+                            .room-details-item__header
+                                h3.room-details-item__title Отзывы посетителей номера
+                                span.room-details-item__num 2 отзыва
+                            .room-details-item__body
+                                include ../room-rewiews/_room-rewiews
+                    .room-details-content__bottom
+                        .room-details-item
+                            h3.room-details-item__title Правила
+                            .room-details-item__body
+                                include ../room-details-rules/_room-details-rules
+                        .room-details-item
+                            h3.room-details-item__title Отмена
+                            .room-details-item__body
+                                .room-details-cancel
+                                    p.room-details-cancel__text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+                .room-details-content__card
