@@ -1,0 +1,21 @@
+.room-details-rules{
+    max-width: 300px;
+    width: 100%;
+    color: rgba(31, 32, 65, 0.75);
+    line-height: 24px;
+    &__item{
+        margin-bottom: 10px;
+        padding-left: 21px;
+        position: relative;
+        &::before{
+            position: absolute;
+            left: 0;
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(31, 32, 65, 0.25);
+            transform: translateY(60%);
+        }
+    }
+}
