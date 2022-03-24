@@ -1,0 +1,27 @@
+.room-details-gallery{
+    height: 485px;
+    width: 100%;
+    &__inner{
+        display: grid;
+        grid-template-areas: 
+        "post-1 post-1 post-1 post-2"  
+        "post-1 post-1 post-1 post-3"; 
+    }
+    &__img{
+        object-fit: cover;
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+    }
+    &__item--1{
+        grid-area: post-1;
+    }
+    &__item--2{
+        grid-area: post-2;
+        height: 242px;
+    }
+    &__item--3{
+        grid-area: post-3;
+        height: 242px;
+    }
+}
