@@ -51,11 +51,18 @@ module.exports = {
         }),
         new HTMLWebpackPlugin({
             template: './src/index.pug',
-            filename: "index.html"
+            filename: "index.html",
+            cache: false,
         }),
         new HTMLWebpackPlugin({
             template: './src/search-room.pug',
-            filename: "search-room.html"
+            filename: "search-room.html",
+            cache: false,
+        }),
+        new HTMLWebpackPlugin({
+            template: './src/room-details.pug',
+            filename: "room-details.html",
+            cache: false,
         }),
     ],
     module: {
