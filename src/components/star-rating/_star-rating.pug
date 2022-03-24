@@ -1,11 +1,13 @@
-ul.star-rating
-    li.star-rating__item
-        img.star-rating__img(src=require("./images/star.svg") alt="star") 
-    li.star-rating__item
-        img.star-rating__img(src=require("./images/star.svg") alt="star") 
-    li.star-rating__item
-        img.star-rating__img(src=require("./images/star.svg") alt="star") 
-    li.star-rating__item
-        img.star-rating__img(src=require("./images/star.svg") alt="star") 
-    li.star-rating__item 
-        img.star-rating__img(src=require("./images/star.svg") alt="star") 
+mixin star-rating(rating)
+    - let count = 0
+    ul.star-rating
+        while count < rating
+            li.star-rating__item 
+                img.star-rating__img(src=require("./components/star-rating/images/star.svg") alt="star")
+            - count += 1
+        if rating < 5
+            - let unlike = 5 - rating
+                while unlike > 0
+                    li.star-rating__item 
+                        img.star-rating__img(src=require("./components/star-rating/images/star-transparent.svg") alt="unstar")
+                    - unlike -= 1

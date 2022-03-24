@@ -7,6 +7,7 @@ new AirDatepicker('#calendar', {
     minDate: new Date(),
     autoClose: true,
     multipleDatesSeparator: " - ",
+    container: "calendar",
     navTitles: {
         days: '<strong>MMMM</strong> <i>yyyy</i>',
     },

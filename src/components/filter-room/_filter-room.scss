@@ -19,5 +19,9 @@
     .dropdown-counter-guests,
     .dropdown-counter-facilities{
         width: 266px;
+        .air-datepicker{
+            padding: 15px 5px;
+            --adp-width: 256px;
+        } 
     }
 }
