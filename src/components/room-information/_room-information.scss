@@ -1,0 +1,29 @@
+.room-information{
+    width: 280px;
+    &__item{
+        padding: 23px 0 17px 0;
+        border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+        display: flex;
+        justify-content: space-between;
+        &:first-child{
+            padding-top: 0;
+        }
+    }
+    &__img{
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+        margin-right: 10px;
+    }
+    &__info{
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75); 
+    }
+    &__title{
+        font-weight: 700;
+    }
+    &__text{
+        font-weight: 400;
+    }
+}
