@@ -1,0 +1,54 @@
+.room-rewiews{
+    &__item{
+        margin-bottom: 20px;
+    }
+    &__info{
+        display: flex;
+        line-height: 24px;
+        margin-bottom: 12px;
+    }
+    &__user-img{
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    &__user-name{
+        color: rgba(31, 32, 65, 0.75);
+    }
+    &__content{
+        display: flex;
+    }
+    &__likes{
+        margin-right: 14px;
+        background: #FFFFFF;
+        border-radius: 10px;
+        height: 20px;
+        min-width: 40px;
+        display: flex;
+        align-items: center;
+        color: rgba(31, 32, 65, 0.25);
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        cursor: pointer;
+        span{
+            font-size: 10px;
+            line-height: 12px;
+        }
+        svg{
+            margin: 0 5px;
+        }
+        &.active{
+            color: #BC9CFF;
+            border: 1px solid #BC9CFF;
+            svg{
+                path{
+                    fill: #BC9CFF;
+                }
+            }
+        }
+    }
+    &__text{
+        line-height: 24px;
+    }
+}
