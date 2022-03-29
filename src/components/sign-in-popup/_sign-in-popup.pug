@@ -1,0 +1,11 @@
+form#sign-in-popup.mfp-hide.white-popup-block.sign-in-popup
+    h1.sign-in-popup__title Войти
+    fieldset(style='border:0;')
+        .sign-in-popup__list
+            .sign-in-popup__item.sign-in-popup__fio
+                input#email-sign-in-popup.sign-in-popup__input(name='email' type='text' placeholder='Email' required='')
+                input#password-sign-in-popup.sign-in-popup__input(name='password' type='password' placeholder='Пароль' required='')
+        button.sign-in-popup__btn-submit.button-purple-arrow(type="submit") войти
+        .sign-in-popup__enter
+            p.sign-in-popup__enter-text Нет аккаунта на Toxin?
+            a.sign-in-popup__enter-btn.button-white(href="#") создать

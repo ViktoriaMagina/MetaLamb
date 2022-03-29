@@ -1,0 +1,167 @@
+.registration-popup{
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    width: 380px;
+    padding: 40px 30px 30px 30px;
+    margin: 0 auto;
+    &__title{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        color: #1F2041; 
+        margin-bottom: 20px;
+    }
+    &__item{
+        &-name{
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            text-transform: uppercase;
+            color: #1F2041;
+            margin-bottom: 5px;
+        }
+    }
+    &__fio{
+        margin-bottom: 10px;
+    }
+    &__input{
+        background: #FFFFFF;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 4px;
+        height: 44px;
+        width: 100%;
+        color: rgba(31, 32, 65, 0.25);
+        padding: 13px 15px;
+        margin-bottom: 10px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &:focus,
+        &:hover{
+            border: 1px solid rgba(31, 32, 65, 0.5);
+        }
+    }
+    &__gender{
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    &__gender-box{
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    &__radio-fake{
+        background: #FFFFFF;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: relative;
+        margin-right: 10px;
+        &::after{
+            position: absolute;
+            content: "";
+            background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+    }
+    &__radio{
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        visibility: hidden;
+        &:checked{
+            & + span {
+                border: 1px solid #BC9CFF;
+                &::after{
+                    display: block;
+                }
+            }
+            & + span + span{
+                color: rgba(31, 32, 65, 0.75);
+            }
+        }
+    }
+    &__radio-name{
+        line-height: 24px;
+    }
+    &__birthday{
+        margin-bottom: 20px;
+    }
+    &__contacts{
+        margin-bottom: 10px;
+    }
+    &__mailing{
+        margin-bottom: 20px;
+        &-box{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+    &__toggle-fake{
+        background: #FFFFFF;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 10px;
+        width: 40px;
+        height: 20px;
+        margin-right: 10px;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(31, 32, 65, 0.25);
+            top: 3px;
+            left: 4px;
+        }
+    }
+    &__toggle{
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        visibility: hidden;
+        opacity: 0;
+        &:checked{
+            & + span {
+                border: 1px solid #BC9CFF;
+                &::after{
+                    right: 4px;
+                    left: auto;
+                    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+                }
+            }
+        }
+    }
+    &__toggle-name{
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);   
+    }
+    &__btn-submit{
+        margin-bottom: 30px;
+    }
+    &__enter{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-text{
+            color: #000000;
+        }
+        &-btn{
+            width: 99px;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+form#registration-popup.mfp-hide.white-popup-block.registration-popup
+    h1.registration-popup__title Регистрация аккаунта
+    fieldset(style='border:0;')
+        .registration-popup__list
+            .registration-popup__item.registration-popup__fio
+                input#name-registration.registration-popup__input(name='name' type='text' placeholder='Имя' required='')
+                input#lastname-registration.registration-popup__input(name='lastname' type='text' placeholder='Фамилия' required='')
+            .registration-popup__item.registration-popup__gender
+                label.registration-popup__gender-box
+                    input.registration-popup__radio(type="radio", name="gender" required='')
+                    span.registration-popup__radio-fake
+                    span.registration-popup__radio-name Мужчина
+                label.registration-popup__gender-box
+                    input.registration-popup__radio(type="radio", name="gender" required='')
+                    span.registration-popup__radio-fake
+                    span.registration-popup__radio-name Женщина
+            .registration-popup__item.registration-popup__birthday
+                span.registration-popup__item-name дата рождения
+                input#birthday-registration.registration-popup__input(type="text", name="birthday" required='' placeholder="ДД.ММ.ГГГГ")
+            .registration-popup__item.registration-popup__contacts
+                span.registration-popup__item-name данные для входа в сервис
+                input#email-registration.registration-popup__input(name='email' type='email' placeholder='Email' required='')
+                input#password-registration.registration-popup__input(name='password' type='password' placeholder='Пароль' required='')
+            .registration-popup__item.registration-popup__mailing
+                label.registration-popup__mailing-box
+                    input.registration-popup__toggle(type="checkbox", name="gender" required='')
+                    span.registration-popup__toggle-fake
+                    span.registration-popup__toggle-name Получать спецпредложения
+        button.registration-popup__btn-submit.button-purple-arrow(type="submit") зарегистрироваться
+        .registration-popup__enter
+            p.registration-popup__enter-text Уже есть аккаунт на Toxin
+            a.registration-popup__enter-btn.button-white.sign-in-popup-link(href='#sign-in-popup') войти
