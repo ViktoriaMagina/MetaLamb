@@ -37,6 +37,9 @@
         display: flex;
         position: relative;
     }
+    &__name{
+        cursor: pointer;
+    }
     &__checkbox{
         position: absolute;
         top: 0;

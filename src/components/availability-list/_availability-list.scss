@@ -5,6 +5,9 @@
         display: flex;
         position: relative;
     }
+    &__info{
+        cursor: pointer;
+    }
     &__checkbox{
         position: absolute;
         top: 0;
