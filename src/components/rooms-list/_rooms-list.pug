@@ -1,7 +1,12 @@
 include ../room-item/_room-item.pug
 //- room-item(number,status, price, rewiews, rating, img)
 .rooms-list
-    h1.rooms-list__title Номера, которые мы для вас подобрали
+    .rooms-list__header
+        button.rooms-list__burger
+            span
+            span
+            span
+        h1.rooms-list__title Номера, которые мы для вас подобрали
     ul.rooms-list__content
         li.rooms-list__item.room-item
             +room-item("888", "люкс", "9990", "145", 5, "1")
@@ -28,4 +33,5 @@ include ../room-item/_room-item.pug
         li.rooms-list__item.room-item
             +room-item("352", "", "5000", "145", 3, "12")
     include ../page-paginaton/_page-paginaton
+				
             

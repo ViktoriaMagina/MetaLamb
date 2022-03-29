@@ -1,20 +1,37 @@
 include ../star-rating/_star-rating.pug
 
 mixin room-item(number,status, price, rewiews, rating, img)
-    .room-item
-        .room-item__slider
-            .room-item__slider-item
-                a.room-item__slider-link(href="#")
-                    img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
-            .room-item__slider-item
-                a.room-item__slider-link(href="#")
-                    img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
-            .room-item__slider-item
-                a.room-item__slider-link(href="#")
-                    img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
-            .room-item__slider-item
-                a.room-item__slider-link(href="#")
-                    img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
+    .room-item__inner
+        .swiper
+            .swiper-wrapper
+                .swiper-slide.room-item__slider-item
+                    a.room-item__slider-link(href="#")
+                        img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
+                .swiper-slide.room-item__slider-item
+                    a.room-item__slider-link(href="#")
+                        img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
+                .swiper-slide.room-item__slider-item
+                    a.room-item__slider-link(href="#")
+                        img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
+                .swiper-slide.room-item__slider-item
+                    a.room-item__slider-link(href="#")
+                         img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
+            .swiper-pagination
+            .swiper-button-prev
+            .swiper-button-next
+        //- .room-item__slider
+        //-     .room-item__slider-item
+        //-         a.room-item__slider-link(href="#")
+        //-             img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
+        //-     .room-item__slider-item
+        //-         a.room-item__slider-link(href="#")
+        //-             img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
+        //-     .room-item__slider-item
+        //-         a.room-item__slider-link(href="#")
+        //-             img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
+        //-     .room-item__slider-item
+        //-         a.room-item__slider-link(href="#")
+        //-             img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
         .room-item__box
             .room-item__info
                 .room-item__info-left

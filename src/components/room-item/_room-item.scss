@@ -1,64 +1,90 @@
 .room-item{
-    width: 270px;
-    height: 258px;
-    background-color: #fff;
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-    border-radius: 4px;
-    &__slider{
-        height: 152px;
+    max-width: 32%;
+    width: 100%;
+    @include for-desktop{
+        max-width: 49%;
+    }
+    @include for-tablet-landscape{
         max-width: 100%;
-        position: relative;
-        &-img{
-            border-radius: 4px 4px 0 0;
-            max-width: 100%;
-            object-fit: contain;
-            height: inherit;
+    }
+    @include for-tablet-landscape-min{
+        max-width: 48%;
+    }
+    @include for-phone{
+        max-width: 100%;
+    }
+    &__inner{
+        margin: 0 auto;
+        max-width: 270px;
+        width: 100%;
+        min-height: 258px;
+        background: #FFFFFF;
+        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+        border-radius: 4px;
+        @include for-desktop{
+            max-width: 400px;
         }
-        .room-item__slider-next,
-        .room-item__slider-prev{
-            width: 44px;
-            height: 44px;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: absolute;
-            top: 50%;
-            background-color: transparent;
-            z-index: 10;
+        @media (max-width: 768px) {
+            max-width: 270px;
         }
-        .room-item__slider-next{
-            right: 0;
-            background-image: url("../components/room-item/images/arrow-right.svg");
-        }
-        .room-item__slider-prev{
-            left: 0;
-            background-image: url("../components/room-item/images/arrow-left.svg");
-        }
-        .slick-dots{
-            display: flex;
-            align-items: center;
-            position: absolute;
-            bottom: 15px;
-            right: 15px;
-            li{
-                font-size: 0;
-                line-height: 0;
-                margin-right: 4px;
-                display: block;
-                width: 8px;
-                height: 8px;
-                button{
-                    background-color: transparent;
-                    border: 1px solid #FFFFFF;
-                    box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
-                    border-radius: 50%;
-                    width: 100%;
-                    height: 100%;
-                }
-                &.slick-active{
-                    background-color: #fff;
-                    border-radius: 50%;
+        .swiper{
+            width: 100%;
+            height: 151px;
+            .swiper-button-next{
+                width: 44px;
+                height: 44px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                z-index: 10;
+                background-image: url("../components/room-item/images/arrow-right.svg");
+                &::after{
+                    display: none;
                 }
             }
+            .swiper-button-prev{
+                background-image: url("../components/room-item/images/arrow-left.svg");
+                width: 44px;
+                height: 44px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                &::after{
+                    display: none;
+                }
+            }
+            .swiper-pagination{
+                width: auto;
+                right: 15px;
+                left: auto;
+            }
+            .swiper-pagination-bullet{
+                background-color: transparent;
+                border: 1px solid #FFFFFF;
+                box-shadow: 0px 5px 5px rgba(31, 32, 65, 0.3);
+                opacity: 0;
+            }
+            .swiper-pagination-bullet-active{
+                background-color: #fff
+            }
+        }
+    }
+    &__slider{
+        &-link{
+            display: block;
+            width: 100%;
+            max-width: 100%;
+        }
+        &-item{
+            width: 100%;
+            max-width: 100%;
+        }
+        &-img{
+            border-radius: 4px 4px 0 0;
+            object-fit: cover;
+            max-width: 100%;
+            width: 100%;
+            height: 151px;
         }
     }
     &__box{
@@ -105,6 +131,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
     }
     &__rewiews{
         font-weight: 700;
@@ -119,3 +146,6 @@
         }
     }
 }
+
+
+  
