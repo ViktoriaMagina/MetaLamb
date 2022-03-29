@@ -1,6 +1,5 @@
-@import 'air-datepicker/air-datepicker.css';
-@import 'nouislider/dist/nouislider.css';
-@import 'slick-carousel/slick/slick';
+@import '_libs';
+@import '_media';
 @import '_global';
 @import '_fonts';
 @import '../components/header/_header';
@@ -29,6 +28,11 @@
 @import '../components/room-rewiews/_room-rewiews';
 @import '../components/room-rewiews-item/_room-rewiews-item';
 @import '../components/room-details-rules/_room-details-rules';
+@import '../components/room-details-card/_room-details-card';
+@import '../components/registration-popup/_registration-popup';
+@import '../components/sign-in-popup/_sign-in-popup';
+
+
 
 
 

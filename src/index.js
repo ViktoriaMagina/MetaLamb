@@ -1,5 +1,8 @@
 
 import './styles/style.scss'
+import './components/index-page/_index-page'
+import './components/header/_header'
+import './components/footer/_footer'
 import './components/calendar/_calendar'
 import './components/dropdown/_dropdown'
 import './components/dropdown-counter-guests/_dropdown-counter-guests'
@@ -7,6 +10,7 @@ import './components/dropdown-counter-facilities/_dropdown-counter-facilities'
 import './components/price-range/_price-range'
 import './components/additional-facilities-list/_additional-facilities-list'
 import './components/room-item/_room-item'
+import './components/filter-room/_filter-room'
 import './components/room-rewiews-item/_room-rewiews-item'
-
-
+import './components/registration-popup/_registration-popup'
+import './components/sign-in-popup/_sign-in-popup'
