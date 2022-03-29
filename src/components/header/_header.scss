@@ -12,6 +12,8 @@
         width: 106px;
         height: 40px;
         display: block;
+        flex: 0 0 auto;
+        margin-right: 20px;
         &-img{
             object-fit: contain;
             height: inherit;
@@ -24,9 +26,50 @@
     }
     &__menu{
         margin-right: 44px;
+        @include for-tablet-landscape{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            transform: translateX(-1000%);
+            background-color: rgba(31, 32, 65, 0.5);
+            margin-right: 0;
+            z-index: 12;
+        }
+        &.active{
+            transform: translateX(0);
+        }
         &-list{
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
+            row-gap: 10px;
+            @include for-tablet-landscape{
+                flex-direction: column;
+                background-color: #fff;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                width: 250px;
+                padding: 60px 30px !important;
+                align-items: flex-start;
+            }
+            .header__entry-link{
+                display: none;
+                @include for-tablet-portrait{
+                    display: block;
+                    margin-top: 10px;
+                }
+            }
+            .header__registration-link{
+                display: none;
+                @include for-tablet-portrait{
+                    display: block;
+                    margin-top: 20px;
+                }
+            }
         }
         &-item{
             margin-right: 20px;
@@ -43,15 +86,33 @@
     }
     &__entry-link{
         margin-right: 20px;
-    }
-    .dropdown-header{
-        &:hover{
-            color: #BC9CFF;
+        @include for-tablet-portrait{
+            display: none;
         }
     }
-    .dropdown-link{
-        &:hover{
-            color: #BC9CFF;
+    &__registration-link{
+        @include for-tablet-portrait{
+            display: none;
+        }
+    }
+    &__burger{
+        width: 40px;
+        height: 20px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: transparent;
+        margin-left: 20px;
+        z-index: 13;
+        transition: all .3s ease-in-out;
+        @include for-tablet-landscape{
+            display: flex;
+        }
+        span{
+            display: block;
+            height: 2px;
+            width: 100%;
+            background-color: #BC9CFF;
         }
     }
 }

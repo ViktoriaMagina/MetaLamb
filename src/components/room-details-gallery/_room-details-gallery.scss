@@ -11,10 +11,14 @@
         object-fit: cover;
         max-width: 100%;
         width: 100%;
-        height: 100%;
+        height: inherit;
+    }
+    &__item{
+        height: inherit;
     }
     &__item--1{
         grid-area: post-1;
+        height: 485px;
     }
     &__item--2{
         grid-area: post-2;

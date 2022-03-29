@@ -1,0 +1,35 @@
+.room-details-card
+    form.room-details-card__inner(name="room-booking")
+        .room-details-card__header
+            .room-details-card__header-left
+                b.room-details-card__number №
+                    span 888
+                b.room-details-card__status люкс
+            .room-details-card__header-right
+                b.room-details-card__price 9 990₽
+                    span в сутки
+        .room-details-card__calendar
+            span.room-details-card__calendar-title период
+            include ../calendar/_calendar
+        .room-details-card__guests
+            .room-details-card__guests-title гости
+            include ../dropdown-counter-guests/_dropdown-counter-guests
+        ul.room-details-card__info
+            li.room-details-card__info-item
+                .room-details-card__info-box
+                    p.room-details-card__info-text 9 990₽ х 4 суток
+                span.room-details-card__info-price 39 960₽
+            li.room-details-card__info-item
+                .room-details-card__info-box
+                    p.room-details-card__info-text Сбор за услуги: скидка 2 179₽
+                    img.room-details-card__info-icon(src=require("../global-img/info.svg"), alt="info")
+                span.room-details-card__info-price 0₽
+            li.room-details-card__info-item
+                .room-details-card__info-box
+                    p.room-details-card__info-text Сбор за дополнительные услуги
+                    img.room-details-card__info-icon(src=require("../global-img/info.svg"), alt="info")
+                span.room-details-card__info-price 300₽
+        .room-details-card__total 
+            b.room-details-card__total-title Итого
+            b.room-details-card__total-price 38 081₽
+        button.room-details-card__button.button-purple-arrow(type="submit") забронировать

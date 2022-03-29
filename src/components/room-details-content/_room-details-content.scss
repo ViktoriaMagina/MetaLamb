@@ -1,14 +1,21 @@
 .room-details-content{
+    padding: 70px 0;
     &__wrapper{
         display: flex;
         justify-content: space-between;
     }
     &__inner{
         width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
     &__info{
         max-width: 710px;
         width: 100%;
+        flex: 1 1 auto;
+    }
+    &__card{
+        flex: 0 0 auto;
     }
     &__top{
         display: flex;

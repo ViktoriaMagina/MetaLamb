@@ -3,6 +3,7 @@
 	&__header{
 		position: relative;
 		padding-right: 25px;
+		display: inline;
 		cursor: pointer;
 		&::after{
 			position: absolute;
@@ -14,6 +15,9 @@
 			background-position: center;
 			right: 0;
 		}
+		&:hover{
+            color: #BC9CFF;
+        }
 		&.active{
 			&::after{
 				transform: rotate(180deg);
@@ -39,10 +43,23 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
+		@include for-tablet-landscape{
+			position: sticky;
+			display: none;
+			width: auto;
+			border: navajowhite;
+			box-shadow: none;
+			padding: 0;
+			padding-top: 20px;
+		}
 		&.active{
 			visibility: visible;
 			opacity: 1;
 			transform: translate(-50%, 15px);
+			@include for-tablet-landscape{
+				display: flex;
+				transform: translate(0, 0);
+			}
 		}
 	}
 	&__item{
@@ -51,4 +68,9 @@
 			margin-bottom: 0;
 		}
 	}
+	&-link{
+        &:hover{
+            color: #BC9CFF;
+        }
+    }
 }

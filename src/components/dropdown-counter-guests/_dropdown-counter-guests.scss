@@ -1,5 +1,6 @@
 .dropdown-counter-guests{
-    width: 320px;
+    max-width: 320px;
+    width: 100%;
     position: relative;
     &::after{
         background-image: url('../components/global-img/expand_more.svg');

@@ -1,5 +1,14 @@
 .index-page
-  .container
-    .index-page__wrapper
-      include ../find-numbers-form/_find-numbers-form
-      .index-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+  .index-page__wrapper
+    .index-page__slider-wrapper
+      .index-page__slider
+        .index-page__slider-item
+          img.index-page__slider-img(src=require("./images/bg-1.jpg"), alt="bg-1")
+        .index-page__slider-item
+          img.index-page__slider-img(src=require("./images/bg-2.jpg"), alt="bg-2")
+        .index-page__slider-item
+          img.index-page__slider-img(src=require("./images/bg-3.jpg"), alt="bg-3")
+    .container
+      .index-page__inner
+        include ../find-numbers-form/_find-numbers-form
+        .index-page__text Лучшие номера для вашей работы, отдыха и просто вдохновения

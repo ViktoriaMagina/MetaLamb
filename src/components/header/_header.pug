@@ -6,7 +6,7 @@ header.header
       a.header__logo(href='#')
         img.header__logo-img(src=require("./components/header/images/logo.png"), alt="logo")
       .header__content
-        nav.header__menu
+        nav#header__menu.header__menu
           ul.header__menu-list
             li.header__menu-item
               a.header__menu-link(href='#') О нас
@@ -18,5 +18,13 @@ header.header
               a.header__menu-link(href='#') Новости
             li.header__menu-item
               +dropdown("Соглашения", "Персональные данные", "Пользовательское соглашение")
-        a.header__entry-link.button-white(href='#') войти
-        a.header__registration-link.button-purple(href='#') зарегистрироваться
+            li.header__menu-item
+              a.header__registration-link.button-purple.registration-popup-link(href='#registration-popup') зарегистрироваться
+            li.header__menu-item
+              a.header__entry-link.button-white.sign-in-popup-link(href='#sign-in-popup') войти
+        a.header__entry-link.button-white.sign-in-popup-link(href='#sign-in-popup') войти
+        a.header__registration-link.button-purple.registration-popup-link(href='#registration-popup') зарегистрироваться
+        button#burger-menu.header__burger(type="button")
+          span
+          span
+          span
