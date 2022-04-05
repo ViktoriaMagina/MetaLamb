@@ -1,11 +1,24 @@
 .room-details-gallery{
     height: 485px;
     width: 100%;
+    @include for-tablet-landscape-min{
+        height: 385px;
+    }
+    @include for-phone{
+        height: 426px;
+    }
     &__inner{
         display: grid;
         grid-template-areas: 
         "post-1 post-1 post-1 post-2"  
         "post-1 post-1 post-1 post-3"; 
+        height: inherit;
+        @include for-phone{
+            grid-template-areas: 
+            "post-1"  
+            "post-2"
+            "post-3"; 
+        }
     }
     &__img{
         object-fit: cover;
@@ -18,14 +31,29 @@
     }
     &__item--1{
         grid-area: post-1;
-        height: 485px;
+        height: inherit;
+        @include for-phone{
+            height: 142px;
+        }
     }
     &__item--2{
         grid-area: post-2;
         height: 242px;
+        @include for-tablet-landscape-min{
+            height: 192px;
+        }
+        @include for-phone{
+            height: 142px;
+        }
     }
     &__item--3{
         grid-area: post-3;
         height: 242px;
+        @include for-tablet-landscape-min{
+            height: 192px;
+        }
+        @include for-phone{
+            height: 142px;
+        }
     }
 }

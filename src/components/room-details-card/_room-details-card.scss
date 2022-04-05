@@ -5,6 +5,13 @@
     border-radius: 4px;
     width: 380px;
     padding: 40px 30px 30px 30px;
+    margin-bottom: 30px;
+    @include for-tablet-landscape{
+        width: 320px;
+    }
+    @include for-phone{
+        width: 300px;
+    }
     &__header{
         display: flex;
         align-items: center;

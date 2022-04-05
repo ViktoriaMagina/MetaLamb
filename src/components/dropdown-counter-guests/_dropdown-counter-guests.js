@@ -63,9 +63,11 @@ dropdownСounterMinus.forEach((item)=> {
 dropdownСounterBtnClear.forEach((item) => {
     const dropdownСounter = item.closest(".dropdown-counter-guests")
     const dropdownСounterNums = dropdownСounter.querySelectorAll("[data-guests-num]")
+    const dropdownСounterHeader = dropdownСounter.querySelector(".dropdown-counter-guests__header")
     item.addEventListener("click", function(){
-        dropdownСounterNums.forEach((obj)=> {
-            obj.innerText = 0;
+        dropdownСounterHeader.value = ""
+        dropdownСounterNums.forEach((obj) => {
+            obj.innerText = 0
             dropdownСounterHeaderNum = 0;
         })
     })
@@ -74,10 +76,8 @@ dropdownСounterBtnClear.forEach((item) => {
 dropdownСounterBtnSelect.forEach((item) => {
     const dropdownСounter = item.closest(".dropdown-counter-guests")
     const dropdownСounterBody = dropdownСounter.querySelector(".dropdown-counter-guests__body")
-    const dropdownСounterHeader = dropdownСounter.querySelector(".dropdown-counter-guests__header")
     item.addEventListener("click", function(){
         dropdownСounterBody.classList.remove("active");
         dropdownСounter.classList.remove("active")
-        dropdownСounterHeader.innerText = ""
     })
 })

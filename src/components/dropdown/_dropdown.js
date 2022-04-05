@@ -1,7 +1,7 @@
 const dropdownHeaders = document.querySelectorAll(".dropdown__header");
 const dropdownBodys = document.querySelectorAll(".dropdown__body");
 
-window.addEventListener("DOMContentLoaded", function(){
+window.addEventListener("scroll", function(){
     dropdownHeaders.forEach((item)=> {
         item.classList.remove('active')
     })
@@ -21,7 +21,7 @@ dropdownHeaders.forEach((header)=> {
         dropdownBodys.forEach((item)=> {
             item.classList.remove('active')
         })
-        this.classList.toggle("active")
+        dropdownHeader.classList.toggle("active")
         dropdownBody.classList.toggle("active")
         document.addEventListener("click", function(e){
             if(!(e.target).closest(".dropdown")){

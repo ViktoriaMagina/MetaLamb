@@ -63,11 +63,11 @@
 
 .air-datepicker-body--day-names {
     width: 240px;
-    margin: 0 auto
+    margin: 0 auto;
 }
 .air-datepicker-body--cells {
     width: 240px;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 .air-datepicker-nav--action {
@@ -88,10 +88,11 @@
     border: 1px solid rgba(31, 32, 65, 0.25);
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     border-radius: 4px;
-    padding: 20px;
+    padding: 13px;
+    margin: 0 auto;
     --adp-font-family:'Montserrat', sans-serif;
     --adp-font-size: 12px;
-    --adp-width: 280px;
+    --adp-width: 240px;
     --adp-background-color: #fff;
     --adp-background-color-hover: transparent;
     --adp-background-color-active: #fff;

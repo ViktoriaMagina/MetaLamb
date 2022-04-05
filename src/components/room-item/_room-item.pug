@@ -5,43 +5,30 @@ mixin room-item(number,status, price, rewiews, rating, img)
         .swiper
             .swiper-wrapper
                 .swiper-slide.room-item__slider-item
-                    a.room-item__slider-link(href="#")
+                    a.room-item__slider-link(href="room-details.html")
                         img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
                 .swiper-slide.room-item__slider-item
-                    a.room-item__slider-link(href="#")
+                    a.room-item__slider-link(href="room-details.html")
                         img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
                 .swiper-slide.room-item__slider-item
-                    a.room-item__slider-link(href="#")
+                    a.room-item__slider-link(href="room-details.html")
                         img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
                 .swiper-slide.room-item__slider-item
-                    a.room-item__slider-link(href="#")
+                    a.room-item__slider-link(href="room-details.html")
                          img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
             .swiper-pagination
             .swiper-button-prev
             .swiper-button-next
-        //- .room-item__slider
-        //-     .room-item__slider-item
-        //-         a.room-item__slider-link(href="#")
-        //-             img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
-        //-     .room-item__slider-item
-        //-         a.room-item__slider-link(href="#")
-        //-             img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
-        //-     .room-item__slider-item
-        //-         a.room-item__slider-link(href="#")
-        //-             img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
-        //-     .room-item__slider-item
-        //-         a.room-item__slider-link(href="#")
-        //-             img.room-item__slider-img(src=require(`./components/room-item/images/image-${img}.jpg`) alt=`image-${img}`)
         .room-item__box
             .room-item__info
                 .room-item__info-left
-                    a.room-item__number(href="#") № 
+                    a.room-item__number(href="room-details.html") № 
                         span= number
-                    a.room-item__status(href="#")= status
+                    a.room-item__status(href="room-details.html")= status
                 .room-item__info-right
-                    a.room-item__price(href="#")=price + "₽"
+                    a.room-item__price(href="room-details.html")=price + "₽"
                         span в сутки
             .room-item__social
                 +star-rating(rating)
-                a.room-item__rewiews(href="#")= rewiews
+                a.room-item__rewiews(href="room-details.html")= rewiews
                     span отзывов

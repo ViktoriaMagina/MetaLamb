@@ -1,7 +1,9 @@
 const dropdownСounterHeaders = document.querySelectorAll(".dropdown-counter-facilities__header");
 const dropdownСounterMinus = document.querySelectorAll("[data-facilities-minus]");
 const dropdownСounterPlus = document.querySelectorAll("[data-facilities-plus]");
-let dropdownСounterHeaderNum = 0;
+let dropdownСounterBedroomsNum = 0;
+let dropdownСounterBedsNum = 0;
+let dropdownСounterBathroomsNum = 0;
     
 
 dropdownСounterHeaders.forEach((header)=> {
@@ -24,26 +26,43 @@ const dropdownСounterBtn = (item, sign) => {
     const dropdownСounterBox = item.closest(".dropdown-counter-facilities__box")
     const dropdownСounterHeader = dropdownСounter.querySelector(".dropdown-counter-facilities__header")
     const dropdownСounterNum = dropdownСounterBox.querySelector("[data-facilities-num]")
-    if(sign ==="plus" 
-        ? dropdownСounterNum.innerText < 20  
-        : dropdownСounterNum.innerText > 0
-    ){
-    if(sign === "plus"){
-        dropdownСounterNum.innerText = parseInt(dropdownСounterNum.innerText) + 1
-        dropdownСounterHeaderNum = dropdownСounterHeaderNum + 1
+    const dropdownСounterName = dropdownСounterBox.closest(".dropdown-counter-facilities__item")
+    if(sign ==="plus" ? dropdownСounterNum.innerText < 20  : dropdownСounterNum.innerText > 0){
+        if(dropdownСounterName.dataset.facilitiesName === "bedrooms"){
+            if(sign === "plus"){
+                dropdownСounterNum.innerText = parseInt(dropdownСounterNum.innerText) + 1
+                dropdownСounterBedroomsNum++ 
+            }
+            if(sign === "minus"){
+                dropdownСounterNum.innerText = parseInt(dropdownСounterNum.innerText) - 1
+                dropdownСounterBedroomsNum-- 
+            }
+            dropdownСounterHeader.value = `${dropdownСounterBedroomsNum} спальни,`
+        }
+        if(dropdownСounterName.dataset.facilitiesName === "beds"){
+            if(sign === "plus"){
+                dropdownСounterNum.innerText = parseInt(dropdownСounterNum.innerText) + 1
+                dropdownСounterBedsNum++ 
+            }
+            if(sign === "minus"){
+                dropdownСounterNum.innerText = parseInt(dropdownСounterNum.innerText) - 1
+                dropdownСounterBedsNum-- 
+            }
+            dropdownСounterHeader.value = `${dropdownСounterBedsNum} кровати,`
+        }
+        if(dropdownСounterName.dataset.facilitiesName === "bathrooms"){
+            if(sign === "plus"){
+                dropdownСounterNum.innerText = parseInt(dropdownСounterNum.innerText) + 1
+                dropdownСounterBathroomsNum++ 
+            }
+            if(sign === "minus"){
+                dropdownСounterNum.innerText = parseInt(dropdownСounterNum.innerText) - 1
+                dropdownСounterBathroomsNum-- 
+            }
+            dropdownСounterHeader.value = `${dropdownСounterBathroomsNum} ванных комнат`
+        }
     }
-    if(sign === "minus"){
-        dropdownСounterNum.innerText = parseInt(dropdownСounterNum.innerText) - 1
-        dropdownСounterHeaderNum = dropdownСounterHeaderNum - 1
-    }
-    if(dropdownСounterHeaderNum == 1)
-        dropdownСounterHeader.value = `${dropdownСounterHeaderNum} гость`
-    if(dropdownСounterHeaderNum < 5 & dropdownСounterHeaderNum !=1)
-        dropdownСounterHeader.value = `${dropdownСounterHeaderNum} гостя`
-    if(dropdownСounterHeaderNum >= 5 )
-        dropdownСounterHeader.value = `${dropdownСounterHeaderNum} гостей`
-    }
-    if(dropdownСounterHeaderNum == 0)
+    if(dropdownСounterBedroomsNum == 0 && dropdownСounterBedsNum == 0 && dropdownСounterBathroomsNum == 0)
         dropdownСounterHeader.value = ""
 }
 dropdownСounterPlus.forEach((item)=> {

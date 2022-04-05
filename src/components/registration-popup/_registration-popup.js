@@ -6,8 +6,8 @@ import "jquery.maskedinput"
 $(document).ready(function() {
 	$('.registration-popup-link').magnificPopup({
 		type: 'inline',
-		preloader: false,
 		focus: '#name',
+		fixedContentPos: false,
 		callbacks: {
 			beforeOpen: function() {
 				if($(window).width() < 700) {
@@ -20,7 +20,3 @@ $(document).ready(function() {
 	});
 	// $("#birthday-registration").mask("(999) 999-9999");
 });
-
-// $(document).ready(function($){
-// 	$("#birthday-registration").mask("(999) 999-9999");
-// })

@@ -1,17 +1,143 @@
-// .room-impressions{
-//     &__circle{
-//         width: 120px;
-//         height: 121px;
-//         position: relative;
-//         background-color: red;
-//         border-radius: 50%;
-//         &-title{
-//             position: absolute;
-//             transform: translate(-50%, -50%);
-//             left: 50%;
-//             top: 50%;
-//         }
-//         &-chart{ 
-//         }
-//     }
-// }
+.room-impressions{
+    margin-bottom: 30px;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 120px;
+        width: 311px;
+        @include for-phone{
+            max-width: 300px;
+            width: 100%;
+        }
+    }
+    &__pieContainer {
+        height: 120px;
+        width: 120px;
+        position: relative;
+        @include for-phone{
+            margin-right: 10px;
+        }
+    }
+    &__pieBackground {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+        box-shadow: 0px 0px 8px rgba(0,0,0,0.5);
+    }
+    &__pie {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+    }
+    .hold {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+    }
+    #room-impressions__pieSlice1 .room-impressions__pie {
+        background-color: rgba(139, 164, 249, 1);
+        transform: rotate(155deg);
+        clip: rect(0px, 100px, 100px, 0px);
+    }
+    #room-impressions__pieSlice2 {
+        transform: rotate(30deg);
+    }
+    #room-impressions__pieSlice2 .room-impressions__pie {
+        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+        transform: rotate(60deg);
+        clip: rect(0px, 60px, 100px, 0px);
+    }
+    #room-impressions__pieSlice3 {
+        transform: rotate(-119deg);
+    }    
+    #room-impressions__pieSlice3 .room-impressions__pie {
+        background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+        transform: rotate(120deg);
+        clip: rect(0px, 61px, 120px, 0px);
+    }  
+    #pieSlice4 {
+        transform: rotate(210deg);
+    }     
+    #room-impressions__pieSlice4 .pie {
+        background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+        transform: rotate(10deg);
+    }
+    &__innerCircle {
+        position: absolute;
+        width: 112px;
+        height: 112px;
+        background-color: #fff;
+        border-radius: 100%;
+        top: 4px;
+        left: 4px; 
+    }
+    &__content {
+        position: absolute;
+        display: block;
+        width: 110px;
+        top: 30px;
+        left: 0;
+        text-align: center;
+        color: #BC9CFF;
+        b{
+            font-size: 24px;
+            line-height: 29px;
+        }
+        span{
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+        }
+    }
+    &__circle-item{
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
+        position: relative;
+        padding-left: 15px;
+        &::after{
+            position: absolute;
+            left: 0;
+            top: 6px;
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+        &-fabulous{
+            &::after{
+                background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+            }
+        }
+        &-good{
+            &::after{
+                background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            }
+        }
+        &-satisfactorily{
+            &::after{
+                background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+            }
+        }
+        &-disappointed{
+            &::after{
+                background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+            }
+        }
+    }
+
+}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -5,8 +5,8 @@ import "magnific-popup";
 $(document).ready(function() {
 	$('.sign-in-popup-link').magnificPopup({
 		type: 'inline',
-		preloader: false,
 		focus: '#name',
+		fixedContentPos: false,
 		callbacks: {
 			beforeOpen: function() {
 				if($(window).width() < 700) {

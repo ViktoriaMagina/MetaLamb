@@ -40,10 +40,17 @@
         position: absolute;
         bottom: 18px;
         right: 0;
+        @include for-phone{
+            display: none;
+        }
     }
     .find-numbers-form{
         position: absolute;
         top: 70px;
         left: 0;
+        @include for-phone{
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 }

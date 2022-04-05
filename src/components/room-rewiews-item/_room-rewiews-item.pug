@@ -2,7 +2,7 @@ mixin room-rewiews-item(name, data, likes, img, text)
     ul.room-rewiews__list
         li.room-rewiews__item
             .room-rewiews__info
-                img.room-rewiews__user-img(src=require(`./components/room-rewiews-item/images/user-image-${img}.png`), alt=`${name}`)
+                img.room-rewiews__user-img(src=require(`./components/room-rewiews-item/images/user-image-${img}.jpg`), alt=`${name}`)
                 .room-rewiews__user-info
                     b.room-rewiews__user-name= name
                     p.room-rewiews__user-data= data
