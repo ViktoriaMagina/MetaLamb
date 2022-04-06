@@ -28,13 +28,16 @@
             border-radius: 50%;
             background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
             img{
-                width: 24px;
-                height: 24px;
+                width: 18px;
+                height: 18px;
                 object-fit: contain;
             }
         }
     }
     &__item{
+        &:hover{
+            color: #6FCF97;
+        }
         &--hide{
             font-size: 12px;
             line-height: 40px;

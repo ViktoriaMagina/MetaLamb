@@ -28,6 +28,7 @@ const dropdownСounterBtn = (item, sign) => {
     const dropdownСounterHeader = dropdownСounter.querySelector(".dropdown-counter-guests__header")
     const dropdownСounterNum = dropdownСounterBox.querySelector("[data-guests-num]")
     const dropdownСounterBtnClear = dropdownСounter.querySelector("[data-guests-clear]")
+    const dropdownСounterNums = dropdownСounter.querySelectorAll("[data-guests-num]")
     if(sign ==="plus" 
         ? dropdownСounterNum.innerText < 20  
         : dropdownСounterNum.innerText > 0
@@ -47,9 +48,6 @@ const dropdownСounterBtn = (item, sign) => {
     if(dropdownСounterHeaderNum >= 5 )
         dropdownСounterHeader.value = `${dropdownСounterHeaderNum} гостей`
     }
-    if(dropdownСounterHeaderNum == 0)
-        dropdownСounterHeader.value = ""
-    parseInt(dropdownСounterNum.innerText) != 0 ? dropdownСounterBtnClear.classList.add("active"):dropdownСounterBtnClear.classList.remove("active")
 }
 dropdownСounterPlus.forEach((item)=> {
     const sign = "plus"

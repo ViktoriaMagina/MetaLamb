@@ -4,6 +4,11 @@
         margin-bottom: 11px;
         display: flex;
         position: relative;
+        &:hover{
+            .availability-list__title{
+                color: #BC9CFF;
+            }
+        }
     }
     &__info{
         cursor: pointer;
@@ -53,6 +58,7 @@
         line-height: 18px;
         color: rgba(31, 32, 65, 0.75);
         margin-bottom: 5px;
+        transition: color .2s ease;
     }
     &__text{
         font-size: 12px;

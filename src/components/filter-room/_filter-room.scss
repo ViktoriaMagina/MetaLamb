@@ -3,9 +3,6 @@
     margin-right: 60px;
     flex: 0 0 266px;
     z-index: 10;
-    &.active{
-        transform: translateX(-15px);
-    }
     &__inner{
         position: relative;
     }
@@ -35,12 +32,16 @@
     }
     @include for-tablet-landscape-min{
         position: absolute;
-        transform: translateX(-1000%);
+        transform: translateX(-115%);
         padding-top: 40px;
         padding-left: 20px;
         padding-right: 20px;
         width: 300px;
-        box-shadow: 0px  10px 20px rgba(31, 32, 65, 0.05);
+        box-shadow: 0px  10px 20px rgba(31, 32, 65, 0.3);
+        transition: transform .5s ease;
+        &.active{
+            transform: translateX(-15px);
+        }
     }
     .widget{
         margin-bottom: 30px;

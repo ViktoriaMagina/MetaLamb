@@ -12,16 +12,21 @@
         padding: 23px 0 17px 0;
         border-bottom: 1px solid rgba(31, 32, 65, 0.1);
         display: flex;
-        justify-content: space-between;
         &:first-child{
             padding-top: 0;
+        }
+        &:hover{
+            .room-information__img{
+                transform: scale(1.1);
+            }
         }
     }
     &__img{
         width: 48px;
         height: 48px;
         object-fit: contain;
-        margin-right: 10px;
+        margin-right: 20px;
+        transition: transform .3s ease;
     }
     &__info{
         font-size: 14px;
