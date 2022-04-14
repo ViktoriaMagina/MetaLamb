@@ -15,6 +15,9 @@ body{
 	&.hidden{
 		overflow-y: hidden;
 		padding-right: 17px;
+		@include for-phone{
+			padding-right: 0;
+		}
 	}
 }
 

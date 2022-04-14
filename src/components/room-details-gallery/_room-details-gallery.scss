@@ -40,9 +40,6 @@
     &__item--2{
         grid-area: post-2;
         height: 235px;
-        @include for-tablet-landscape-min{
-            height: 192px;
-        }
         @include for-phone{
             height: 142px;
         }
@@ -50,9 +47,6 @@
     &__item--3{
         grid-area: post-3;
         height: 235px;
-        @include for-tablet-landscape-min{
-            height: 192px;
-        }
         @include for-phone{
             height: 142px;
         }

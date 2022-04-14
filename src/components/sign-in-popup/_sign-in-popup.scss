@@ -7,6 +7,12 @@
     padding: 40px 30px 30px 30px;
     margin: 20px auto;
     position: relative;
+    @include for-phone{
+        padding: 40px 20px 30px 20px;
+    }
+    fieldset{
+        padding: 0;
+    }
     &__title{
         font-weight: 700;
         font-size: 24px;

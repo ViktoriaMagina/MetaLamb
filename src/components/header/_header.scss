@@ -37,7 +37,6 @@
             margin-right: 0;
             z-index: 12;
             opacity: 0;
-            transition: opacity .1s ease;
         }
         &.active{
             transform: translateX(0);
@@ -78,6 +77,9 @@
             margin-right: 20px;
             &:last-child{
                 margin-right: 0;
+            }
+            @include for-tablet-landscape{
+                margin-bottom: 10px;
             }
         }
         &-link{
