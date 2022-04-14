@@ -4,7 +4,6 @@ const dropdownСounterPlus = document.querySelectorAll("[data-facilities-plus]")
 let dropdownСounterBedroomsNum = 0;
 let dropdownСounterBedsNum = 0;
 let dropdownСounterBathroomsNum = 0;
-    
 
 dropdownСounterHeaders.forEach((header)=> {
     header.addEventListener("click", function() {

@@ -2,6 +2,7 @@ form#sign-in-popup.mfp-hide.white-popup-block.sign-in-popup
     h1.sign-in-popup__title Войти
     fieldset(style='border:0;')
         .sign-in-popup__list
+            a.registration-popup__close(class="sign-in-popup-close" href="#")
             .sign-in-popup__item.sign-in-popup__fio
                 input#email-sign-in-popup.sign-in-popup__input(name='email' type='text' placeholder='Email' required='')
                 input#password-sign-in-popup.sign-in-popup__input(name='password' type='password' placeholder='Пароль' required='')

@@ -1,7 +1,10 @@
 .index-page{
-    height: calc(100vh - 70px);
     width: 100%;
     position: relative;
+    height: 550px;
+    @media (min-height: 600px) {
+        height: calc(100vh - 70px);
+    }
     .container{
         height: inherit;
     }
@@ -35,7 +38,7 @@
     &__text{
         line-height: 24px;
         text-align: right;
-        color: rgba(31, 32, 65, 0.75);
+        color: #fff;
         max-width: 297px;
         position: absolute;
         bottom: 18px;

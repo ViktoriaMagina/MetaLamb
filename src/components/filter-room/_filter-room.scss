@@ -12,8 +12,8 @@
         background-color: transparent;
         width: 30px;
         height: 30px;
-        top: -30px;
-        right: 10px;
+        top: -40px;
+        right: -10px;
         @include for-tablet-landscape-min{
             display: block;
         }
@@ -33,7 +33,7 @@
     @include for-tablet-landscape-min{
         position: absolute;
         transform: translateX(-115%);
-        padding-top: 40px;
+        padding-top: 50px;
         padding-left: 20px;
         padding-right: 20px;
         width: 300px;

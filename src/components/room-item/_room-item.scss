@@ -105,6 +105,10 @@
         font-size: 14px;
         line-height: 23px;
         color: #1F2041;
+        transition: color .3s ease;
+        &:hover{
+            color: #BC9CFF;
+        }
         span{
             font-size: 19px;
             display: inline-block;
@@ -123,6 +127,10 @@
         font-size: 14px;
         line-height: 18px;
         color: rgba(31, 32, 65, 0.5);
+        transition: color .3s ease;
+        &:hover{
+            color: #BC9CFF;
+        }
         span{
             font-size: 12px;
             font-weight: 400;
@@ -142,6 +150,10 @@
         font-size: 14px;
         line-height: 18px;
         color: rgba(31, 32, 65, 0.5);
+        transition: color .3s ease;
+        &:hover{
+            color: #BC9CFF;
+        }
         span{
             font-size: 12px;
             font-weight: 400;

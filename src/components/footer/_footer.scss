@@ -114,6 +114,11 @@
             border-top: 1px solid rgba(31, 32, 65, 0.25);
             border-right: 1px solid rgba(31, 32, 65, 0.25);
             border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+            &-img{
+                object-fit: none;
+                width: 100%;
+                height: inherit;
+            }
         }
     }
     .container-large{

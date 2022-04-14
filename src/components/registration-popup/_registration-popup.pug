@@ -2,6 +2,7 @@ form#registration-popup.mfp-hide.white-popup-block.registration-popup
     h1.registration-popup__title Регистрация аккаунта
     fieldset(style='border:0;')
         .registration-popup__list
+            a.registration-popup__close(class="registration-popup-close" href="#")
             .registration-popup__item.registration-popup__fio
                 input#name-registration.registration-popup__input(name='name' type='text' placeholder='Имя' required='')
                 input#lastname-registration.registration-popup__input(name='lastname' type='text' placeholder='Фамилия' required='')

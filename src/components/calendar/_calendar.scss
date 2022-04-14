@@ -51,6 +51,8 @@
 }
 
 .air-datepicker-cell {
+    height: 40px;
+    width: 40px;
     --adp-background-color-hover: linear-gradient(180deg, #d0baff 0%, #acbfff 100%);
     &.-current- {
         background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
@@ -62,11 +64,11 @@
 }
 
 .air-datepicker-body--day-names {
-    width: 240px;
+    width: 280px;
     margin: 0 auto;
 }
 .air-datepicker-body--cells {
-    width: 240px;
+    width: 280px;
     margin: 0 auto;
 }
 
@@ -92,7 +94,6 @@
     margin: 0 auto;
     --adp-font-family:'Montserrat', sans-serif;
     --adp-font-size: 12px;
-    --adp-width: 240px;
     --adp-background-color: #fff;
     --adp-background-color-hover: transparent;
     --adp-background-color-active: #fff;

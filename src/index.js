@@ -1,6 +1,8 @@
 import './styles/style.scss'
+import './favicon.ico'
 import './components/registration-popup/_registration-popup'
 import './components/sign-in-popup/_sign-in-popup'
+import './components/subscription-popup/_subscription-popup'
 import './components/header/_header'
 import './components/footer/_footer'
 import './components/index-page/_index-page'
@@ -17,3 +19,5 @@ import './components/room-rewiews-item/_room-rewiews-item'
 import './components/room-information/_room-information'
 import './components/room-impressions/_room-impressions'
 import './components/filter-room/_filter-room'
+
+

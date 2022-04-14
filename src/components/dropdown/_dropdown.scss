@@ -40,7 +40,7 @@
 		opacity: 0;
 		transform: translate(-50%, 10px);
 		left: 50%;
-		transition: all .3s ease;
+		transition: opacity .3s ease, transform .3s ease;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;

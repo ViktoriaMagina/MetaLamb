@@ -9,6 +9,7 @@
     }
     &__inner{
         display: grid;
+        grid-gap: 14px;
         grid-template-areas: 
         "post-1 post-1 post-1 post-2"  
         "post-1 post-1 post-1 post-3"; 
@@ -38,7 +39,7 @@
     }
     &__item--2{
         grid-area: post-2;
-        height: 242px;
+        height: 235px;
         @include for-tablet-landscape-min{
             height: 192px;
         }
@@ -48,7 +49,7 @@
     }
     &__item--3{
         grid-area: post-3;
-        height: 242px;
+        height: 235px;
         @include for-tablet-landscape-min{
             height: 192px;
         }

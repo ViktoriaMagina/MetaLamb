@@ -1,15 +1,14 @@
 import * as $ from 'jquery'
 import "magnific-popup"
-import "jquery.maskedinput"
 
 
 $(document).ready(function() {
-	$('.registration-popup-link').magnificPopup({
+	$('.subscription-popup-link').magnificPopup({
 		type: 'inline',
 		focus: '#name',
 		// fixedContentPos: false,
 	});
-	$(document).on('click', '.registration-popup-close', function (e) {
+	$(document).on('click', '.subscription-popup-close', function (e) {
 		e.preventDefault();
 		$.magnificPopup.close();
 	});

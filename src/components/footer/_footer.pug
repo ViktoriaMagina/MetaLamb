@@ -44,7 +44,7 @@ footer.footer
             p.footer__form-text Получайте специальные предложения и новости сервиса
             label.footer__form-box
               input.footer__form-input(placeholder='Email' type='email' name='email-submit')
-              button.footer__form-btn(type="submit")
+              a.footer__form-btn.subscription-popup-link(href="#subscription-popup")
                 img.footer__form-btn-img(src=require("./images/arrow-forward.svg") alt='submit')
     .footer__bottom
       .container
@@ -62,3 +62,4 @@ footer.footer
                 img.footer__social-img(src=require("./images/instagram-icon.svg") alt='instagram')
     include ../registration-popup/_registration-popup
     include ../sign-in-popup/_sign-in-popup
+    include ../subscription-popup/_subscription-popup
