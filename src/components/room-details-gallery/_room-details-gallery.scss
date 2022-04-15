@@ -2,14 +2,14 @@
     height: 485px;
     width: 100%;
     @include for-tablet-landscape-min{
-        height: 385px;
+        height: 288px;
     }
     @include for-phone{
         height: 426px;
     }
     &__inner{
         display: grid;
-        grid-gap: 14px;
+        grid-gap: 10px;
         grid-template-areas: 
         "post-1 post-1 post-1 post-2"  
         "post-1 post-1 post-1 post-3"; 
@@ -34,21 +34,21 @@
         grid-area: post-1;
         height: inherit;
         @include for-phone{
-            height: 142px;
+            height: 139px;
         }
     }
     &__item--2{
         grid-area: post-2;
-        height: 235px;
-        @include for-phone{
-            height: 142px;
+        height: 237px;
+        @include for-tablet-landscape-min{
+            height: 139px;
         }
     }
     &__item--3{
         grid-area: post-3;
-        height: 235px;
-        @include for-phone{
-            height: 142px;
+        height: 237px;
+        @include for-tablet-landscape-min{
+            height: 139px;
         }
     }
 }
